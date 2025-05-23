@@ -2,7 +2,6 @@
 
 import clsx from 'clsx'
 import { usePathname } from 'next/navigation'
-import { useEffect } from 'react'
 import { Container } from '~/components/ui/container'
 import { GrowingUnderline } from '~/components/ui/growing-underline'
 import { Link } from '~/components/ui/link'
@@ -15,28 +14,8 @@ import { ThemeSwitcher } from './theme-switcher'
 import { AUTHOR_INFO } from '~/data/author-info'
 import { KbarSearchTrigger } from '../search/kbar-trigger'
 
-let logged = false
-function logASCIItext() {
-  if (logged) return
-  console.info(`
-                                 __                                       
-                                /\\ \\                                      
-  ___ ___      __    ___      __\\ \\ \\/'\\      __        ___ ___      __   
-/' __\` __\`\\  /'__\`\\/' _ \`\\  /'_ \`\\ \\ , <    /'__\`\\    /' __\` __\`\\  /'__\`\\ 
-/\\ \\/\\ \\/\\ \\/\\  __//\\ \\/\\ \\/\\ \\L\\ \\ \\ \\\\\`\\ /\\  __/  __/\\ \\/\\ \\/\\ \\/\\  __/ 
-\\ \\_\\ \\_\\ \\_\\ \\____\\ \\_\\ \\_\\ \\____ \\ \\_\\ \\_\\ \\____\\/\\_\\ \\_\\ \\_\\ \\_\\ \\____\\
- \\/_/\\/_/\\/_/\\/____/\\/_/\\/_/\\/___L\\ \\/_/\\/_/\\/____/\\/_/\\/_/\\/_/\\/_/\\/____/
-                              /\\____/                                     
-                              \\_/__/                                                          
-  `)
-  console.log('🧑‍💻 View source:', SITE_METADATA.siteRepo)
-  console.log(`🙌 Let's connect:`, AUTHOR_INFO.email)
-  logged = true
-}
-
 export function Header() {
   const pathname = usePathname()
-  useEffect(logASCIItext, [])
 
   return (
     <Container

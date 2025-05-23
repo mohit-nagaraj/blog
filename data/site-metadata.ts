@@ -1,13 +1,13 @@
 export const SITE_METADATA = {
-  title: `Mengke's blog - Mengke's coding journey`,
-  author: 'Mengke',
-  headerTitle: `Mengke's blog`,
+  title: `Mohit's blog - My coding journey`,
+  author: 'Mohit Nagaraj',
+  headerTitle: `Mohit's blog`,
   description:
     'A personal space on the cloud where I document my programming journey, sharing lessons, insights, and resources for fellow developers.',
   language: 'en-us',
-  theme: 'system', // system, dark or light
-  siteUrl: 'https://www.mengke.me',
-  siteRepo: 'https://github.com/mk965/mengke.me',
+  theme: 'dark', // system, dark or light
+  siteUrl: 'https://blog.mohitnagaraj.in/',
+  siteRepo: 'https://github.com/mohit-nagaraj/blog',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/profile.webp`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.jpeg`,
 
@@ -16,7 +16,7 @@ export const SITE_METADATA = {
   analytics: {
     umamiAnalytics: {
       websiteId: process.env.NEXT_UMAMI_ID,
-      shareUrl: 'https://analytics.eu.umami.is/share/EqvpZYPABxaQA3mr/mengke.me',
+      shareUrl: 'https://cloud.umami.is/share/4gOlTcozgJgk6vpG/blog.mohitnagaraj.in',
     },
   },
   comments: {
