@@ -121,14 +121,6 @@ export type GithubRepository = {
   repositoryTopics: string[]
 }
 
-export type ImdbFriends = {
-  type: string
-  name: string
-  slogan: string
-  imgSrc: string
-  url: string
-}
-
 export interface ViewApiResponse {
   data?: {
     total: string

@@ -2,7 +2,7 @@ export const AUTHOR_INFO = {
   name: 'Mohit Nagaraj',
   description:
     'A personal space on the cloud where I document my programming journey, sharing lessons, insights, and resources for fellow developers.',
-  email: '',
+  email: 'mohitnagaraj25@gmail.com',
   identity: 'Learner | Builder',
   address: {
     city: 'Bangalore, India',
@@ -10,7 +10,7 @@ export const AUTHOR_INFO = {
     timeZone: 8,
   },
   work: {
-    company: '',
+    company: 'Student',
     occupation: 'Software Engineer',
     location: 'Bangalore, India',
     website: 'https://mohitnagaraj.in',
