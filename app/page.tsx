@@ -1,16 +1,47 @@
-import { allBlogs, allSnippets } from 'contentlayer/generated'
-import { Home } from '~/components/home-page'
+// import { allBlogs, allSnippets } from 'contentlayer/generated'
+// import { Home } from '~/components/home-page'
+// import { allCoreContent } from '~/utils/contentlayer'
+// import { sortPosts } from '~/utils/misc'
+
+// const MAX_POSTS_DISPLAY = 5
+// const MAX_SNIPPETS_DISPLAY = 6
+
+// export default async function HomePage() {
+//   return (
+//     <Home
+//       posts={allCoreContent(sortPosts(allBlogs)).slice(0, MAX_POSTS_DISPLAY)}
+//       snippets={allCoreContent(sortPosts(allSnippets)).slice(0, MAX_SNIPPETS_DISPLAY)}
+//     />
+//   )
+// }
+
+import { genPageMetadata } from 'app/seo'
+import { allBlogs } from 'contentlayer/generated'
+import { ListLayout } from '~/layouts/list-layout'
+import { POSTS_PER_PAGE } from '~/utils/const'
 import { allCoreContent } from '~/utils/contentlayer'
 import { sortPosts } from '~/utils/misc'
 
-const MAX_POSTS_DISPLAY = 5
-const MAX_SNIPPETS_DISPLAY = 6
+export const metadata = genPageMetadata({ title: 'Blog' })
 
-export default async function HomePage() {
+export default function BlogPage() {
+  const posts = allCoreContent(sortPosts(allBlogs))
+  const pageNumber = 1
+  const initialDisplayPosts = posts.slice(
+    POSTS_PER_PAGE * (pageNumber - 1),
+    POSTS_PER_PAGE * pageNumber
+  )
+  const pagination = {
+    currentPage: pageNumber,
+    totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
+  }
+
   return (
-    <Home
-      posts={allCoreContent(sortPosts(allBlogs)).slice(0, MAX_POSTS_DISPLAY)}
-      snippets={allCoreContent(sortPosts(allSnippets)).slice(0, MAX_SNIPPETS_DISPLAY)}
+    <ListLayout
+      posts={posts}
+      initialDisplayPosts={initialDisplayPosts}
+      pagination={pagination}
+      title="All posts"
     />
   )
 }

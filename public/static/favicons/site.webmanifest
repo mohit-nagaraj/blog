@@ -16,17 +16,17 @@
     },
     {
       "src": "/static/favicons/favicon-76x76.png",
-      "sizes": "76x76",
+      "sizes": "70x70",
       "type": "image/png"
     },
     {
       "src": "/static/favicons/favicon-150x150.png",
-      "sizes": "150x150",
+      "sizes": "137x137",
       "type": "image/png"
     },
     {
       "src": "/static/favicons/favicon-800x800.png",
-      "sizes": "800x800",
+      "sizes": "726x726",
       "type": "image/png"
     }
   ],
