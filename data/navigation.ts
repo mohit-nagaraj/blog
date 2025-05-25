@@ -9,7 +9,7 @@ export const HEADER_NAV_LINKS = [
 
 export const MORE_NAV_LINKS = [
   { href: '/tags', title: 'Tags', emoji: 'label' },
-  { href: '/friends', title: 'Friends', emoji: 'woman-and-man-holding-hands' },
+  // { href: '/friends', title: 'Friends', emoji: 'woman-and-man-holding-hands' },
   // { href: SITE_METADATA.analytics.umamiAnalytics.shareUrl, title: 'Blog stats', emoji: 'bar-chart' },
 ]
 
@@ -23,6 +23,6 @@ export const FOOTER_NAV_LINKS = [
 
 export const FOOTER_PERSONAL_STUFF = [
   { href: '/about', title: 'About' },
-  { href: '/friends', title: 'Friends' },
+  // { href: '/friends', title: 'Friends' },
   // { href: SITE_METADATA.analytics.umamiAnalytics.shareUrl, title: 'Blog stats' },
 ]

@@ -5,7 +5,7 @@ type Params = {
   slug: string | string[]
 }
 
-const isProduction = process.env.NODE_ENV === 'production'
+// const isProduction = process.env.NODE_ENV === 'production'
 export async function GET(req: Request, props: { params: Promise<Params> }) {
   try {
     const params = await props.params
@@ -32,9 +32,9 @@ export async function POST(req: Request, props: { params: Promise<Params> }) {
     ) as string
 
     // Avoid dirty data in the development environment
-    if (!isProduction) {
-      return NextResponse.json({ total: '0' })
-    }
+    // if (!isProduction) {
+    //   return NextResponse.json({ total: '0', message: 'Development mode, no views recorded.' })
+    // }
 
     const newOrUpdatedViews = await __db.views.upsert({
       where: { slug },

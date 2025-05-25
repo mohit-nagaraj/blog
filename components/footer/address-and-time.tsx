@@ -6,20 +6,20 @@ import { Link } from '~/components/ui/link'
 // import { Twemoji } from '~/components/ui/twemoji'
 import { AUTHOR_INFO } from '~/data/author-info'
 
-const TIME_IS = 'https://time.is/Beijing'
-const MY_TIMEZONE = 'Asia/Shanghai'
-const MY_TIMEZONE_OFFSET = AUTHOR_INFO.address.timeZone * -60
+const TIME_IS = 'https://time.is/Bengaluru'
+const MY_TIMEZONE = 'Asia/Kolkata'
+const MY_TIMEZONE_OFFSET = 330
 
 function getTime() {
   const date = new Date()
-  const visitorTimezoneOffset = date.getTimezoneOffset()
+  const visitorTimezoneOffset = -date.getTimezoneOffset()
   const hoursDiff = (visitorTimezoneOffset - MY_TIMEZONE_OFFSET) / 60
   const diff =
     hoursDiff === 0
       ? 'same time'
       : hoursDiff > 0
         ? `${hoursDiff}h ahead`
-        : `${hoursDiff * -1}h behind`
+        : `${Math.abs(hoursDiff)}h behind`
 
   const time = new Intl.DateTimeFormat('en-US', {
     timeZone: MY_TIMEZONE,
