@@ -12,15 +12,9 @@ const LINKS = [
   },
   {
     title: `My writings`,
-    href: `/blog`,
+    href: `/`,
     emoji: 'memo',
     event: 'home-link-blog',
-  },
-  {
-    title: `Snippets collection`,
-    href: `/snippets`,
-    emoji: 'dna',
-    event: 'home-link-snippets',
   },
   {
     title: `About me & this blog`,

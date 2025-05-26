@@ -1,4 +1,4 @@
-import type { Blog, Snippet } from '~/.contentlayer/generated'
+import type { Blog } from '~/.contentlayer/generated'
 import { ProfileCard } from '~/components/cards/profile'
 import { Container } from '~/components/ui/container'
 import { Twemoji } from '~/components/ui/twemoji'
@@ -9,13 +9,7 @@ import { LatestPosts } from './latest-posts'
 import { BlogLinks } from './links'
 import { TypedBios } from './typed-bios'
 
-export function Home({
-  posts,
-  snippets,
-}: {
-  posts: CoreContent<Blog>[]
-  snippets: CoreContent<Snippet>[]
-}) {
+export function Home({ posts }: { posts: CoreContent<Blog>[] }) {
   return (
     <Container as="div" className="pt-4 lg:pt-12">
       <div className="py-6 md:pb-8 xl:grid xl:grid-cols-3">
@@ -25,9 +19,9 @@ export function Home({
             <Intro />
             <TypedBios />
             <div className="mb-6 mt-4 md:mb-8">
-              <p>I started learning to code in 2015 and have been hooked ever since.</p>
-              <p>I landed my first job as a Web developer in 2020.</p>
-              <p>I have a passion for JS/TS, web dev.</p>
+              <p>I started learning to code in 2022 and have been hooked ever since.</p>
+              <p>I landed my first internship as a Web developer in 2023.</p>
+              <p>I have a passion for JS/TS, web dev, hosting.</p>
               <p>I started this blog to document and share my knowledge & experience.</p>
             </div>
             <BlogLinks />
@@ -41,7 +35,7 @@ export function Home({
           <ProfileCard />
         </div>
       </div>
-      <LatestPosts posts={posts} snippets={snippets} />
+      <LatestPosts posts={posts} />
     </Container>
   )
 }

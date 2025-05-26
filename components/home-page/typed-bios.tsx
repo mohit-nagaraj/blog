@@ -56,7 +56,6 @@ export function TypedBios() {
         </li>
         <li>I love web development.</li>
         <li>I work mostly with JS/TS technologies.</li>
-        <li>I'm Chou's husband.</li>
         <li>
           I'm a cat-person. <Twemoji emoji="cat" />
         </li>

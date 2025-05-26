@@ -1,5 +1,5 @@
 import { genPageMetadata } from 'app/seo'
-import { allBlogs, allSnippets } from 'contentlayer/generated'
+import { allBlogs } from 'contentlayer/generated'
 import { slug } from 'github-slugger'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
@@ -43,12 +43,7 @@ export default async function TagPage(props: { params: Promise<{ tag: string }> 
   const filteredPosts = allCoreContent(
     sortPosts(allBlogs.filter((post) => post.tags && post.tags.map((t) => slug(t)).includes(tag)))
   )
-  const filteredSnippets = allCoreContent(
-    sortPosts(
-      allSnippets.filter((post) => post.tags && post.tags.map((t) => slug(t)).includes(tag))
-    )
-  )
-  if (filteredPosts.length === 0 && filteredSnippets.length === 0) {
+  if (filteredPosts.length === 0) {
     return notFound()
   }
   return (
@@ -60,7 +55,6 @@ export default async function TagPage(props: { params: Promise<{ tag: string }> 
         </>
       }
       posts={filteredPosts}
-      snippets={filteredSnippets}
     />
   )
 }
