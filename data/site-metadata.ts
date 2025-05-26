@@ -9,7 +9,7 @@ export const SITE_METADATA = {
   siteUrl: 'https://blog.mohitnagaraj.in/',
   siteRepo: 'https://github.com/mohit-nagaraj/blog',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/profile.webp`,
-  socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.jpeg`,
+  socialBanner: `${process.env.BASE_PATH || ''}/static/images/page.jpg`,
 
   locale: 'en-US',
   stickyNav: true,

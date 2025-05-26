@@ -1,26 +1,8 @@
-// import { allBlogs } from 'contentlayer/generated'
-// import { Home } from '~/components/home-page'
-// import { allCoreContent } from '~/utils/contentlayer'
-// import { sortPosts } from '~/utils/misc'
-
-// const MAX_POSTS_DISPLAY = 5
-
-// export default async function HomePage() {
-//   return (
-//     <Home
-//       posts={allCoreContent(sortPosts(allBlogs)).slice(0, MAX_POSTS_DISPLAY)}
-//     />
-//   )
-// }
-
-import { genPageMetadata } from 'app/seo'
 import { allBlogs } from 'contentlayer/generated'
 import { ListLayout } from '~/layouts/list-layout'
 import { POSTS_PER_PAGE } from '~/utils/const'
 import { allCoreContent } from '~/utils/contentlayer'
 import { sortPosts } from '~/utils/misc'
-
-export const metadata = genPageMetadata({ title: 'Blog' })
 
 export default function BlogPage() {
   const posts = allCoreContent(sortPosts(allBlogs))

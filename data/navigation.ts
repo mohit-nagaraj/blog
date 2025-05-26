@@ -9,7 +9,6 @@ export const MORE_NAV_LINKS = [{ href: '/tags', title: 'Tags', emoji: 'label' }]
 export const FOOTER_NAV_LINKS = [
   { href: '/', title: 'Blog' },
   { href: '/projects', title: 'Projects' },
+  { href: '/about', title: 'About' },
   { href: '/tags', title: 'Tags' },
 ]
-
-export const FOOTER_PERSONAL_STUFF = [{ href: '/about', title: 'About' }]
