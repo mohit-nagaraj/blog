@@ -1,5 +1,5 @@
 // import { SITE_METADATA } from '~/data/site-metadata'
-import { BriefcaseBusiness, Github, Mail, MapPin } from 'lucide-react'
+import { BriefcaseBusiness, Github, Linkedin, Mail, MapPin } from 'lucide-react'
 import { Fragment } from 'react'
 import JuejinIcon from '~/icons/juejin.svg'
 // import { Twemoji } from '~/components/ui/twemoji'
@@ -21,20 +21,20 @@ const SOCIALS = [
     Icon: () => <Github size={20} strokeWidth={1.5} />,
     umamiEvent: 'profile-card-github',
   },
-  // {
-  //   platform: 'linkedin',
-  //   handle: getAccountHandle(AUTHOR_INFO.social.linkedin),
-  //   href: AUTHOR_INFO.social.linkedin,
-  //   Icon: () => <Linkedin size={20} strokeWidth={1.5} />,
-  //   umamiEvent: 'profile-card-linkedin',
-  // },
   {
-    platform: 'juejin',
-    handle: getAccountHandle(AUTHOR_INFO.social.juejin),
-    href: AUTHOR_INFO.social.juejin,
-    Icon: () => <JuejinIcon className="h-5 w-5" />,
-    umamiEvent: 'profile-card-x',
+    platform: 'linkedin',
+    handle: getAccountHandle(AUTHOR_INFO.social.linkedin),
+    href: AUTHOR_INFO.social.linkedin,
+    Icon: () => <Linkedin size={20} strokeWidth={1.5} />,
+    umamiEvent: 'profile-card-linkedin',
   },
+  // {
+  //   platform: 'juejin',
+  //   handle: getAccountHandle(AUTHOR_INFO.social.juejin),
+  //   href: AUTHOR_INFO.social.juejin,
+  //   Icon: () => <JuejinIcon className="h-5 w-5" />,
+  //   umamiEvent: 'profile-card-x',
+  // },
 ]
 
 export function ProfileCardInfo() {

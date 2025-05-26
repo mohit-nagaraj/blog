@@ -20,7 +20,7 @@ export const AUTHOR_INFO = {
     x: 'https://x.com/mohit_nagaraj',
     facebook: '/',
     youtube: '/',
-    linkedin: 'https://www.linkedin.com/in/mohit-nagaraj/',
+    linkedin: 'https://www.linkedin.com/in/mohit-nagaraj',
     threads: '/',
     instagram: '/',
     juejin: '/',

@@ -6,7 +6,7 @@ import { SITE_METADATA } from '~/data/site-metadata'
 export function Logo({ className }: { className?: string }) {
   return (
     <Link
-      href="/"
+      href="https://www.mohitnagaraj.in/"
       aria-label={SITE_METADATA.headerTitle}
       className={clsx([
         'rounded-xl p-0.5',

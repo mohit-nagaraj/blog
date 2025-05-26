@@ -24,11 +24,6 @@ const THEMES = [
     value: 'dark',
     icon: MoonStar,
   },
-  {
-    label: 'System',
-    value: 'system',
-    icon: Monitor,
-  },
 ]
 
 export function ThemeSwitcher() {

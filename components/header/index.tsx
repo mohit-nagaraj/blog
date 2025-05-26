@@ -31,7 +31,10 @@ export function Header() {
         <div className="flex items-center gap-4">
           <div className="hidden gap-1.5 sm:flex">
             {HEADER_NAV_LINKS.map(({ title, href }) => {
-              const isActive = pathname.startsWith(href)
+              const isActive = href === '/' ? pathname === '/' : pathname.startsWith(href)
+              console.log(
+                `Checking active link: ${title}, href: ${href}, pathname: ${pathname}, isActive: ${isActive}`
+              )
               return (
                 <Link key={title} href={href} className="px-3 py-1 font-medium">
                   <GrowingUnderline

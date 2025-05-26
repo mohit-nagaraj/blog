@@ -46,6 +46,10 @@ export async function generateMetadata(props: {
       url: img.includes('http') ? img : SITE_METADATA.siteUrl + img,
     }
   })
+  // pick your preview image (absolute URL!)
+  // const previewImage = post.images?.[0]
+  // ? `${SITE_METADATA.siteUrl}${post.images[0]}`
+  // : `${SITE_METADATA.siteUrl}${SITE_METADATA.socialBanner}`
 
   return {
     title: post.title,

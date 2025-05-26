@@ -37,7 +37,7 @@ export function SocialAccounts({ className }: { className?: string }) {
         <span className="sr-only">Mail</span>
         <Mail strokeWidth={1.5} />
       </a>
-      <a
+      {/* <a
         href={AUTHOR_INFO.social.juejin}
         target="_self"
         data-umami-event="contact-mail"
@@ -46,9 +46,9 @@ export function SocialAccounts({ className }: { className?: string }) {
       >
         <span className="sr-only">Juejin</span>
         <Juejin strokeWidth={1.5} className="h-6 w-6" />
-      </a>
-      {/* <a
-        href={SITE_METADATA.x}
+      </a> */}
+      <a
+        href={AUTHOR_INFO.social.x}
         target="_blank"
         data-umami-event="contact-twitter"
         className="text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
@@ -68,7 +68,7 @@ export function SocialAccounts({ className }: { className?: string }) {
             fill="currentColor"
           />
         </svg>
-      </a> */}
+      </a>
       {/* <a
         href={SITE_METADATA.facebook}
         target="_self"

@@ -53,15 +53,6 @@ export const PROJECTS: Project[] = [
   },
   {
     type: 'self',
-    title: "mengke.me - Mengke's coding journey",
-    description: '',
-    imgSrc: '/static/images/home_page.webp',
-    repo: 'mk965/mengke.me',
-    url: 'https://mengke.me',
-    builtWith: ['NextJS', 'TailwindCSS', 'Typescript', 'Prisma', 'Umami'],
-  },
-  {
-    type: 'self',
     title: 'qiankun-demo - Quick Start Qiankun Micro Frontend',
     description: `Qiankun Micro frontend integrates various frameworks, including Vue2, Vue3, React, NuxtJS, Angular, etc..`,
     imgSrc: '/static/images/projects/qiankun.png',
