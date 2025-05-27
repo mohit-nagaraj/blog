@@ -1,8 +1,6 @@
-// import { SITE_METADATA } from '~/data/site-metadata'
 import { BriefcaseBusiness, Github, Linkedin, Mail, MapPin } from 'lucide-react'
 import { Fragment } from 'react'
-import JuejinIcon from '~/icons/juejin.svg'
-// import { Twemoji } from '~/components/ui/twemoji'
+import { Twemoji } from '~/components/ui/twemoji'
 import { AUTHOR_INFO } from '~/data/author-info'
 
 function getAccountHandle(url = '') {
@@ -28,13 +26,6 @@ const SOCIALS = [
     Icon: () => <Linkedin size={20} strokeWidth={1.5} />,
     umamiEvent: 'profile-card-linkedin',
   },
-  // {
-  //   platform: 'juejin',
-  //   handle: getAccountHandle(AUTHOR_INFO.social.juejin),
-  //   href: AUTHOR_INFO.social.juejin,
-  //   Icon: () => <JuejinIcon className="h-5 w-5" />,
-  //   umamiEvent: 'profile-card-x',
-  // },
 ]
 
 export function ProfileCardInfo() {
@@ -45,29 +36,11 @@ export function ProfileCardInfo() {
       <div className="mb-2 mt-4 space-y-4">
         <div className="flex items-center text-gray-700 dark:text-gray-200">
           <BriefcaseBusiness strokeWidth={1.5} size={20} />
-          <p className="flex items-center px-2">
-            {AUTHOR_INFO.work.occupation}
-            {/* @{' '}
-            <a
-              target="_blank"
-              href={AUTHOR_INFO.work.website || '/'}
-              rel="noreferrer"
-              className="underline-offset-4 hover:underline"
-            >
-              {AUTHOR_INFO.work.company}
-            </a> */}
-          </p>
+          <p className="flex items-center px-2">{AUTHOR_INFO.work.occupation}</p>
         </div>
         <div className="flex items-center text-gray-700 dark:text-gray-200">
           <MapPin strokeWidth={1.5} size={20} />
-          <p className="px-2">
-            {AUTHOR_INFO.address.city}
-            {/* {AUTHOR_INFO.address.flag && (
-              <span className="absolute ml-1 inline-flex pt-px">
-                <Twemoji emoji={AUTHOR_INFO.address.flag} />
-              </span>
-            )} */}
-          </p>
+          <p className="px-2">{AUTHOR_INFO.address.city}</p>
         </div>
         <div className="flex items-center text-gray-700 dark:text-gray-200">
           <Mail strokeWidth={1.5} size={20} />

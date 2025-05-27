@@ -5,9 +5,6 @@ import Exercism from '~/icons/exercism.svg'
 import Git from '~/icons/git.svg'
 import GitHub from '~/icons/github.svg'
 import Goodreads from '~/icons/goodreads.svg'
-import HeadlessUI from '~/icons/headlessui.svg'
-import Hydrogen from '~/icons/hydrogen.svg'
-import IMBb from '~/icons/imdb.svg'
 import Java from '~/icons/java.svg'
 import Javascript from '~/icons/javascript.svg'
 import JWT from '~/icons/jsonwebtokens.svg'
@@ -18,47 +15,34 @@ import MongoDB from '~/icons/mongodb.svg'
 import MySQL from '~/icons/mysql.svg'
 import NextJS from '~/icons/nextjs.svg'
 import Node from '~/icons/nodejs.svg'
-import Npm from '~/icons/npm.svg'
-import OpenAI from '~/icons/openai.svg'
+import AWS from '~/icons/aws.svg'
+import SocketIO from '~/icons/socket.svg'
+import Go from '~/icons/go.svg'
+import Docker from '~/icons/docker.svg'
+import Passport from '~/icons/passport.svg'
+import Vite from '~/icons/vite.svg'
+import GraphQL from '~/icons/graphql.svg'
 import Picsum from '~/icons/picsum.svg'
 import Prisma from '~/icons/prisma.svg'
-import Pygame from '~/icons/pygame.svg'
-import Python from '~/icons/python.svg'
 import Railway from '~/icons/railway.svg'
 import React from '~/icons/react.svg'
-import Remix from '~/icons/remix.svg'
-import RottenTomatoes from '~/icons/rottentomatoes.svg'
 import SemanticUI from '~/icons/semanticui.svg'
 import Shopify from '~/icons/shopify.svg'
 import Spotify from '~/icons/spotify.svg'
 import TailwindCSS from '~/icons/tailwind.svg'
+import Zustand from '~/icons/zustand.svg'
 import Turborepo from '~/icons/turborepo.svg'
 import Typescript from '~/icons/typescript.svg'
 import Umami from '~/icons/umami.svg'
 import Vercel from '~/icons/vercel.svg'
 import Webpack from '~/icons/webpack.svg'
 import VSCode from '~/icons/vscode.svg'
-import Pnpm from '~/icons/pnpm.svg'
-import WebGL from '~/icons/webgl.svg'
-import Vue from '~/icons/vue.svg'
-import VueX from '~/icons/vuex.svg'
 import NuxtJS from '~/icons/nuxtjs.svg'
-import ECharts from '~/icons/echarts.svg'
-import AntDesign from '~/icons/ant-design.svg'
 import Gulp from '~/icons/gulp.svg'
-import AMap from '~/icons/amap.svg'
-import BaiduMap from '~/icons/baidu-map.svg'
-import WechatMiniProgram from '~/icons/wechat-mini-program.svg'
-import Angular from '~/icons/angular.svg'
-import AntV from '~/icons/antv.svg'
-import Qiankun from '~/icons/qiankun.svg'
-import Weibo from '~/icons/weibo.svg'
 import I18n from '~/icons/i18n.svg'
 import Apple from '~/icons/apple.svg'
 import Commitlint from '~/icons/commitlint.svg'
-import Html from '~/icons/html5.svg'
 import Postcss from '~/icons/postcss.svg'
-import Env from '~/icons/env.svg'
 
 export let BrandsMap: Record<
   string,
@@ -70,15 +54,9 @@ export let BrandsMap: Record<
   Commitlint: {
     Icon: Commitlint,
   },
-  Html: {
-    Icon: Html,
-  },
   Postcss: {
     Icon: Postcss,
     url: 'https://postcss.org/',
-  },
-  Env: {
-    Icon: Env,
   },
   React: {
     Icon: React,
@@ -87,10 +65,6 @@ export let BrandsMap: Record<
   Goodreads: {
     Icon: Goodreads,
     url: 'https://www.goodreads.com/',
-  },
-  Remix: {
-    Icon: Remix,
-    url: 'https://remix.run',
   },
   Git: {
     Icon: Git,
@@ -111,10 +85,6 @@ export let BrandsMap: Record<
   Node: {
     Icon: Node,
     url: 'https://nodejs.org',
-  },
-  Npm: {
-    Icon: Npm,
-    url: 'https://www.npmjs.com',
   },
   Bash: {
     Icon: Bash,
@@ -152,21 +122,17 @@ export let BrandsMap: Record<
     Icon: Railway,
     url: 'https://railway.app',
   },
+  Zustand: {
+    Icon: Zustand,
+    url: 'https://zustand-demo.pmnd.rs',
+  },
   Spotify: {
     Icon: Spotify,
     url: 'https://spotify.com',
   },
-  OpenAI: {
-    Icon: OpenAI,
-    url: 'https://openai.com',
-  },
   Turborepo: {
     Icon: Turborepo,
     url: 'https://turborepo.org',
-  },
-  Hydrogen: {
-    Icon: Hydrogen,
-    url: 'https://hydrogen.shopify.dev/',
   },
   Shopify: {
     Icon: Shopify,
@@ -179,10 +145,6 @@ export let BrandsMap: Record<
   ThemeKit: {
     Icon: Shopify,
     url: 'https://shopify.dev/docs/storefronts/themes/tools/theme-kit',
-  },
-  HeadlessUI: {
-    Icon: HeadlessUI,
-    url: 'https://headlessui.dev',
   },
   Webpack: {
     Icon: Webpack,
@@ -204,14 +166,6 @@ export let BrandsMap: Record<
     Icon: CSS,
     url: 'https://www.w3.org/Style/CSS/',
   },
-  Python: {
-    Icon: Python,
-    url: 'https://www.python.org',
-  },
-  Pygame: {
-    Icon: Pygame,
-    url: 'https://www.pygame.org',
-  },
   Exercism: {
     Icon: Exercism,
     url: 'https://exercism.org',
@@ -232,77 +186,17 @@ export let BrandsMap: Record<
     Icon: MySQL,
     url: 'https://mysql.com',
   },
-  RottenTomatoes: {
-    Icon: RottenTomatoes,
-    url: 'https://www.rottentomatoes.com/',
-  },
-  IMBb: {
-    Icon: IMBb,
-    url: 'https://www.imdb.com/',
-  },
   VSCode: {
     Icon: VSCode,
     url: 'https://code.visualstudio.com/',
-  },
-  Pnpm: {
-    Icon: Pnpm,
-    url: 'https://pnpm.io/',
-  },
-  WebGL: {
-    Icon: WebGL,
-    url: 'https://www.khronos.org/webgl/',
-  },
-  Vue: {
-    Icon: Vue,
-    url: 'https://vuejs.org/',
-  },
-  VueX: {
-    Icon: VueX,
-    url: 'https://vuex.vuejs.org/',
   },
   NuxtJS: {
     Icon: NuxtJS,
     url: 'https://nuxt.com/',
   },
-  ECharts: {
-    Icon: ECharts,
-    url: 'https://echarts.apache.org/',
-  },
-  AntDesign: {
-    Icon: AntDesign,
-    url: 'https://ant.design/',
-  },
   Gulp: {
     Icon: Gulp,
     url: 'https://gulpjs.com/',
-  },
-  AMap: {
-    Icon: AMap,
-    url: 'https://amap.com/',
-  },
-  BaiduMap: {
-    Icon: BaiduMap,
-    url: 'https://map.baidu.com/',
-  },
-  WechatMiniProgram: {
-    Icon: WechatMiniProgram,
-    url: 'https://mp.weixin.qq.com/cgi-bin/wx',
-  },
-  Angular: {
-    Icon: Angular,
-    url: 'https://angular.dev/',
-  },
-  AntV: {
-    Icon: AntV,
-    url: 'https://antv.antgroup.com/',
-  },
-  Qiankun: {
-    Icon: Qiankun,
-    url: 'https://qiankun.umijs.org/',
-  },
-  Weibo: {
-    Icon: Weibo,
-    url: 'https://weibo.com/',
   },
   I18n: {
     Icon: I18n,
@@ -310,6 +204,42 @@ export let BrandsMap: Record<
   Apple: {
     Icon: Apple,
     url: 'https://www.apple.com/ios',
+  },
+  Go: {
+    Icon: Go,
+    url: 'https://golang.org',
+  },
+  TypeScript: {
+    Icon: Typescript,
+    url: 'https://www.typescriptlang.org',
+  },
+  Docker: {
+    Icon: Docker,
+    url: 'https://www.docker.com',
+  },
+  AWS: {
+    Icon: AWS,
+    url: 'https://aws.amazon.com',
+  },
+  NodeJS: {
+    Icon: Node,
+    url: 'https://nodejs.org',
+  },
+  Passport: {
+    Icon: Passport,
+    url: 'http://www.passportjs.org/',
+  },
+  Vite: {
+    Icon: Vite,
+    url: 'https://vitejs.dev/',
+  },
+  GraphQL: {
+    Icon: GraphQL,
+    url: 'https://graphql.org/',
+  },
+  SocketIO: {
+    Icon: SocketIO,
+    url: 'https://socket.io/',
   },
 }
 
@@ -329,7 +259,7 @@ export function Brand(props: {
   }
 
   return (
-    <Link href={`${url}?ref=mengke.me`} className={className}>
+    <Link href={`${url}?ref=mohitnagaraj.in`} className={className}>
       <Icon className={iconClassName} fill="currentColor" />
     </Link>
   )

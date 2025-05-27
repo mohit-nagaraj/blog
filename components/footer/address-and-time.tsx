@@ -5,6 +5,7 @@ import { GrowingUnderline } from '~/components/ui/growing-underline'
 import { Link } from '~/components/ui/link'
 // import { Twemoji } from '~/components/ui/twemoji'
 import { AUTHOR_INFO } from '~/data/author-info'
+import { Twemoji } from '../ui/twemoji'
 
 const TIME_IS = 'https://time.is/Bengaluru'
 const MY_TIMEZONE = 'Asia/Kolkata'
@@ -37,14 +38,7 @@ export function AddressAndTime() {
     <div className="space-y-2 py-1.5 text-gray-800 dark:text-gray-200">
       <div className="flex items-center gap-2">
         <Map className="h-5 w-5" />
-        <span className="font-medium">
-          {AUTHOR_INFO.address.city}
-          {/* {AUTHOR_INFO.address.flag && (
-            <>
-              , <Twemoji emoji={AUTHOR_INFO.address.flag} className="!h-4.5" />
-            </>
-          )} */}
-        </span>
+        <span className="font-medium">{AUTHOR_INFO.address.city}</span>
       </div>
       <div className="flex items-center gap-2">
         <Clock className="h-5 w-5" />

@@ -6,8 +6,7 @@ export const AUTHOR_INFO = {
   identity: 'Learner | Builder',
   address: {
     city: 'Bangalore, India',
-    flag: 'flag-india',
-    timeZone: 8,
+    timeZone: 5.5,
   },
   work: {
     company: 'Student',

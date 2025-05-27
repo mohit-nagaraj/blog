@@ -6,6 +6,9 @@ export async function fetchRepoData(repo: string): Promise<GithubRepository | nu
     console.error('Missing `GITHUB_API_TOKEN`')
     return null
   }
+  if (!repo) {
+    return null
+  }
   try {
     const { repository }: GraphQlQueryResponseData = await graphql(
       `
