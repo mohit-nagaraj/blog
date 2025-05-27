@@ -6,7 +6,7 @@ export const SITE_METADATA = {
     'A personal space on the cloud where I document my programming journey, sharing lessons, insights, and resources for fellow developers.',
   language: 'en-us',
   theme: 'dark', // system, dark or light
-  siteUrl: 'https://blog.mohitnagaraj.in/',
+  siteUrl: 'https://blog.mohitnagaraj.in',
   siteRepo: 'https://github.com/mohit-nagaraj/blog',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/profile.webp`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/page.jpg`,
