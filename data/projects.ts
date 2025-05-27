@@ -9,7 +9,7 @@ export const PROJECTS: Project[] = [
     url: 'https://sellersetu.in',
     // repo: '',
     // demo: <AvpDemo />,
-    builtWith: ['NextJS', 'Typescript', 'TailwindCSS', 'Zustand', 'ReactQuery'],
+    builtWith: ['NextJS', 'Typescript', 'TailwindCSS', 'Zustand', 'Tanstack'],
   },
   {
     type: 'self',
@@ -43,7 +43,7 @@ export const PROJECTS: Project[] = [
     type: 'self',
     title: 'VidStreamX',
     description: `VidStreamX is a scalable video transcoding pipeline inspired by MUX, designed for efficient video processing and distribution. It leverages AWS services like S3 and SQS for seamless video uploads, transcoding, and optimized delivery. The system emphasizes scalability, error handling, and efficient resource utilization.`,
-    imgSrc: '/static/images/projects/vidstreamX.webp',
+    imgSrc: '/static/images/projects/vidstreamx.webp',
     repo: 'mohit-nagaraj/VidStreamX',
     url: 'https://github.com/mohit-nagaraj/VidStreamX',
     builtWith: ['Go', 'Docker', 'AWS'],

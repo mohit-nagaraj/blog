@@ -32,6 +32,7 @@ import Spotify from '~/icons/spotify.svg'
 import TailwindCSS from '~/icons/tailwind.svg'
 import Zustand from '~/icons/zustand.svg'
 import Turborepo from '~/icons/turborepo.svg'
+import Tanstack from '~/icons/tanstack.svg'
 import Typescript from '~/icons/typescript.svg'
 import Umami from '~/icons/umami.svg'
 import Vercel from '~/icons/vercel.svg'
@@ -240,6 +241,10 @@ export let BrandsMap: Record<
   SocketIO: {
     Icon: SocketIO,
     url: 'https://socket.io/',
+  },
+  Tanstack: {
+    Icon: Tanstack,
+    url: 'https://tanstack.com/',
   },
 }
 
