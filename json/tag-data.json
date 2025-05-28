@@ -1,12 +1,1 @@
-{
-  "2024": 1,
-  "ai": 3,
-  "mcp": 2,
-  "llm": 3,
-  "deepseek": 1,
-  "ollama": 1,
-  "dify": 1,
-  "life": 1,
-  "year-end": 1,
-  "summary": 1
-}
+{ "ai": 1, "golang": 1, "llm": 1 }
