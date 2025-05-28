@@ -14,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: `${SITE_METADATA.siteUrl}/sitemap.xml`,
+    sitemap: `${SITE_METADATA.siteUrl}/sitemap-back.xml`,
     host: SITE_METADATA.siteUrl,
   }
 }
