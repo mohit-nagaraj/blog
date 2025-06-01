@@ -12,6 +12,12 @@ const allBlogs = [
     date: '2025-03-29',
     draft: false,
   },
+  {
+    path: 'blog/202506/Monad_Hackthon_Expirience',
+    lastmod: '2025-06-01',
+    date: '2025-06-01',
+    draft: false,
+  },
 ]
 
 function generateSitemap() {

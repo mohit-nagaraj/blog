@@ -1,1 +1,11 @@
-{ "ai": 1, "golang": 1, "llm": 1 }
+{
+  "web3": 1,
+  "hackathon": 1,
+  "blockchain": 1,
+  "privacy": 1,
+  "ethereum": 1,
+  "nextjs": 1,
+  "ai": 1,
+  "golang": 1,
+  "llm": 1
+}
