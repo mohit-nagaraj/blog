@@ -11,14 +11,14 @@ tags:
     'Binary Trees',
   ]
 draft: false
-summary: 'This deep dive into computer science fundamentals explains not only the seven foundational data structures—arrays, linked lists, hash tables, stacks, queues, graphs, and trees—but also introduces powerful, lesser-known variants like B-trees, Radix Trees, Ropes, Bloom Filters, and Cuckoo Hashing. Learn how these weird data structures solve real-world problems efficiently.'
+summary: 'This deep dive into computer science fundamentals explains not only the seven foundational data structures-arrays, linked lists, hash tables, stacks, queues, graphs, and trees-but also introduces powerful, lesser-known variants like B-trees, Radix Trees, Ropes, Bloom Filters, and Cuckoo Hashing. Learn how these weird data structures solve real-world problems efficiently.'
 images: ['/static/images/blog/202506/Weird_Data_Structures/data_structures.webp']
 authors: ['default']
 ---
 
 ## Introduction
 
-If you’ve ever touched a programming course — even just peeked into one — chances are you've heard about the seven foundational data structures in computer science: arrays, linked lists, hash tables, stacks, queues, graphs, and trees. They’re as essential to programming as the alphabet is to language. But like many things in tech, there's a deeper rabbit hole filled with fascinating alternatives, weird optimizations, and real-world problems these basic data structures just can’t solve on their own.
+If you’ve ever touched a programming course - even just peeked into one - chances are you've heard about the seven foundational data structures in computer science: arrays, linked lists, hash tables, stacks, queues, graphs, and trees. They’re as essential to programming as the alphabet is to language. But like many things in tech, there's a deeper rabbit hole filled with fascinating alternatives, weird optimizations, and real-world problems these basic data structures just can’t solve on their own.
 
 This article not only provides a clear explanation of the core data structures but also explores their more complex and less-known variants such as B-Trees, Radix Trees, Ropes, Bloom Filters, and Cuckoo Hashing.
 
@@ -26,7 +26,7 @@ This article not only provides a clear explanation of the core data structures b
 
 ## What Is a Data Structure?
 
-A **data structure** is a method of organizing and storing data in a computer so that it can be accessed and modified efficiently. The acronym **CRUD** — Create, Read, Update, Delete — is the essence of what we do with data, and a good structure makes these operations fast and reliable.
+A **data structure** is a method of organizing and storing data in a computer so that it can be accessed and modified efficiently. The acronym **CRUD** - Create, Read, Update, Delete - is the essence of what we do with data, and a good structure makes these operations fast and reliable.
 
 ---
 
@@ -51,7 +51,7 @@ Let's look at some powerful yet lesser-known data structures that solve real-wor
 ### B-Trees (Not Binary Trees)
 
 **Problem with Binary Trees:**
-Binary search trees (BSTs) are powerful, reducing time complexity from O(n²) to O(log n). But they have one major downside — each node has only two children. That causes the tree to grow deep and slow when dealing with massive datasets.
+Binary search trees (BSTs) are powerful, reducing time complexity from O(n²) to O(log n). But they have one major downside - each node has only two children. That causes the tree to grow deep and slow when dealing with massive datasets.
 
 **Enter the B-Tree:**
 A **B-tree** is a self-balancing tree structure where each node can have multiple children and keys. This drastically reduces the height of the tree, minimizing **disk I/O operations**, making it ideal for large databases and file systems.
@@ -73,7 +73,7 @@ How do you route billions of IP addresses quickly? How do you auto-complete word
 They merge nodes with only one child, reducing depth and memory overhead.
 
 **Use Case:**
-Efficient prefix searching — critical for IP routing, DNS resolution, and auto-completion.
+Efficient prefix searching - critical for IP routing, DNS resolution, and auto-completion.
 
 | Radix Tree vs Trie     | Key Difference                               |
 | ---------------------- | -------------------------------------------- |
@@ -103,7 +103,7 @@ Used in: Text editors (like Emacs, Scintilla), IDEs, version control systems.
 
 **What if you only need to know whether an item **might** be present?**
 
-**Introducing:** Bloom Filters — a **probabilistic** data structure.
+**Introducing:** Bloom Filters - a **probabilistic** data structure.
 
 - Uses multiple hash functions.
 - Tells you if an element is **definitely not** in a set or **maybe is**.
@@ -118,7 +118,7 @@ Used in: Text editors (like Emacs, Scintilla), IDEs, version control systems.
 
 ### Cuckoo Hashing
 
-Inspired by nature — the **cuckoo bird** lays eggs in other birds' nests. Similarly, **Cuckoo Hashing** moves keys around when collisions happen.
+Inspired by nature - the **cuckoo bird** lays eggs in other birds' nests. Similarly, **Cuckoo Hashing** moves keys around when collisions happen.
 
 **Key Insight:** Each item has 2+ possible positions. If a spot is full, it evicts the existing item, just like the cuckoo chick.
 
@@ -156,7 +156,7 @@ Inspired by nature — the **cuckoo bird** lays eggs in other birds' nests. Simi
 
 ### 2. What is a hash table good for?
 
-**Answer:** Fast data retrieval using key-value pairs — used in caches, databases, and dictionaries.
+**Answer:** Fast data retrieval using key-value pairs - used in caches, databases, and dictionaries.
 
 ### 3. How is a B-tree different from a binary search tree?
 
