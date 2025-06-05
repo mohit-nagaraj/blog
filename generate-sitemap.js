@@ -18,6 +18,12 @@ const allBlogs = [
     date: '2025-06-01',
     draft: false,
   },
+  {
+    path: 'blog/202506/Weird_Data_Structures',
+    lastmod: '2025-06-05',
+    date: '2025-06-05',
+    draft: false,
+  },
 ]
 
 function generateSitemap() {
