@@ -13,6 +13,12 @@ const allBlogs = [
     draft: false,
   },
   {
+    path: 'blog/202505/Electron_Shadcn_Guide',
+    lastmod: '2025-05-20',
+    date: '2025-05-20',
+    draft: false,
+  },
+  {
     path: 'blog/202506/Monad_Hackthon_Expirience',
     lastmod: '2025-06-01',
     date: '2025-06-01',
@@ -20,10 +26,22 @@ const allBlogs = [
   },
   {
     path: 'blog/202506/Weird_Data_Structures',
-    lastmod: '2025-06-05',
+    lastmod: '2025-06-10',
     date: '2025-06-05',
     draft: false,
   },
+  // {
+  //   path: 'blog/202506/How_To_Prompt',
+  //   lastmod: '2025-06-15',
+  //   date: '2025-06-15',
+  //   draft: false,
+  // },
+  // {
+  //   path: 'blog/202506/Product_Management_101',
+  //   lastmod: '2025-06-30',
+  //   date: '2025-06-30',
+  //   draft: false,
+  // },
 ]
 
 function generateSitemap() {
