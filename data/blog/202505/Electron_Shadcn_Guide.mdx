@@ -1,13 +1,11 @@
 ---
-title: 'Smooth Sailing: Electron + Vite + Tailwind CSS v4 + ShadCN UI (2025 Setup Guide)'
+title: '2025 Setup Guide: Electron-Vite + Tailwind-Shadcn UI'
 date: '2025-05-20'
 tags: ['Electron', 'Vite', 'Tailwind CSS', 'ShadCN UI', 'React', 'JavaScript', 'Desktop Apps']
 draft: false
-summary: 'A gentle, step-by-step guide to wiring up an Electron desktop app with Vite, Tailwind CSS v4, and ShadCN UI in 2025 - with path aliases, dev scripts, and common pitfalls explained in plain English.'
+summary: 'A detailed, step-by-step guide to wiring up an Electron desktop app with Vite, Tailwind CSS v4, and ShadCN UI in 2025 - with path aliases, dev scripts, and common pitfalls explained in plain English.'
 images: ['/static/images/blog/202505/Electron_Shadcn_Guide/cover.webp']
 authors: ['default']
----
-
 ---
 
 Building modern desktop apps no longer means wrestling with Webpack or hand-rolled CSS. With Electron ⚡ Vite you get an instant-reload development loop, Tailwind CSS v4 gives you atomic styling at lightspeed, and ShadCN UI sprinkles in production-ready components - all without leaving JavaScript. This post walks you through a clean, JavaScript-only setup, shows how to keep the ShadCN CLI happy with a `jsconfig.json` alias, and highlights the little “gotchas” that trip people up in 2025. By the end you’ll have a hot-reloading Electron window, styled with Tailwind 4 utility classes, and a ShadCN button proving everything works together.
@@ -89,7 +87,7 @@ Add a throw-away line inside `App.tsx`/`App.jsx`:
 
 Hit **Save** and your Electron window should hot-reload with a green headline. If nothing happens, double-check that the renderer process imported `main.css` and that Tailwind post-CSS plugin logs to the terminal ([stackoverflow.com][8], [github.com][9]).
 
-### 4. Add a **JavaScript-friendly** alias
+### 4. Add a **JavaScript** alias
 
 ShadCN’s CLI validates that `@/*` resolves to your source root. Because we’re using **JavaScript**, we create a `jsconfig.json` instead of `tsconfig.json`:
 
@@ -143,12 +141,12 @@ Electron-Vite bundles the main/preload with esbuild and the renderer with Vite�
 
 ## Common gotchas & quick fixes
 
-| Symptom                                           | Cause                                                                                                              | Fix                                                                                                        |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| **`No import alias found in your tsconfig.json`** | Running ShadCN CLI without a matching `jsconfig`/`tsconfig` entry                                                  | Ensure `"@/*": ["src/renderer/src/*"]` exists in `jsconfig.json` ([reddit.com][13])                        |
-| Tailwind classes don’t show up                    | Forgot the `@import "tailwindcss";` line or plugin isn’t loaded                                                    | Re-add the import, restart dev server ([github.com][9])                                                    |
-| ESLint can’t resolve `@/`                         | ESLint needs its own alias mapping                                                                                 | Add `"settings": { "import/resolver": { "typescript": { "project": "./jsconfig.json" } } }` to `.eslintrc` |
-| Prod build ships 5 MB of icons                    | Tree-shake ShadCN icon imports by using `import { ArrowRight } from 'lucide-react'` instead of `import * as Icons` |                                                                                                            |
+| Symptom                                           | Cause                                                             | Fix                                                                                                        |
+| ------------------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **`No import alias found in your tsconfig.json`** | Running ShadCN CLI without a matching `jsconfig`/`tsconfig` entry | Ensure `"@/*": ["src/renderer/src/*"]` exists in `jsconfig.json` ([reddit.com][13])                        |
+| Tailwind classes don’t show up                    | Forgot the `@import "tailwindcss";` line or plugin isn’t loaded   | Re-add the import, restart dev server ([github.com][9])                                                    |
+| ESLint can’t resolve `@/`                         | ESLint needs its own alias mapping                                | Add `"settings": { "import/resolver": { "typescript": { "project": "./jsconfig.json" } } }` to `.eslintrc` |
+| Prod build ships 5 MB of icons                    | No Tree-shaken ShadCN icon cause of `import * as Icons`           | imports by using `import { ArrowRight } from 'lucide-react'` - use what is only required                   |
 
 ## Final thoughts
 
