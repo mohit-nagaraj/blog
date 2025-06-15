@@ -30,12 +30,12 @@ const allBlogs = [
     date: '2025-06-05',
     draft: false,
   },
-  // {
-  //   path: 'blog/202506/How_To_Prompt',
-  //   lastmod: '2025-06-15',
-  //   date: '2025-06-15',
-  //   draft: false,
-  // },
+  {
+    path: 'blog/202506/How_To_Prompt',
+    lastmod: '2025-06-15',
+    date: '2025-06-15',
+    draft: false,
+  },
   // {
   //   path: 'blog/202506/Product_Management_101',
   //   lastmod: '2025-06-30',
