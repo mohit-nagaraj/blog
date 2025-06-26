@@ -36,12 +36,12 @@ const allBlogs = [
     date: '2025-06-15',
     draft: false,
   },
-  // {
-  //   path: 'blog/202506/Product_Management_101',
-  //   lastmod: '2025-06-30',
-  //   date: '2025-06-30',
-  //   draft: false,
-  // },
+  {
+    path: 'blog/202506/Product_Management_Guide',
+    lastmod: '2025-06-30',
+    date: '2025-06-30',
+    draft: false,
+  },
 ]
 
 function generateSitemap() {
