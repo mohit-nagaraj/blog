@@ -42,6 +42,12 @@ const allBlogs = [
     date: '2025-06-30',
     draft: false,
   },
+  {
+    path: 'blog/202507/Custom_Kubernetes_Operator',
+    lastmod: '2025-07-14',
+    date: '2025-07-14',
+    draft: false,
+  },
 ]
 
 function generateSitemap() {
