@@ -79,6 +79,48 @@ function createSearchIndex(allBlogs) {
   }
 }
 
+function createRssFeed(allBlogs) {
+  const currentDate = new Date().toISOString()
+
+  // Filter out draft posts and sort by date (newest first)
+  const publishedPosts = allBlogs
+    .filter((post) => !post.draft)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+
+  // Generate RSS items for each blog post
+  const rssItems = publishedPosts
+    .map((post) => {
+      const postDate = new Date(post.date).toISOString()
+      const postUrl = `${SITE_METADATA.siteUrl}/blog/${post.slug}`
+
+      return `  <item>
+    <title>${post.title}</title>
+    <link>${postUrl}</link>
+    <guid>${postUrl}</guid>
+    <pubDate>${postDate}</pubDate>
+    <description>${post.summary || `Blog post: ${post.title}`}</description>
+    ${post.tags && post.tags.length > 0 ? post.tags.map((tag) => `    <category>${tag}</category>`).join('\n') : ''}
+  </item>`
+    })
+    .join('\n')
+
+  const rssFeed = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>${SITE_METADATA.title}</title>
+    <link>${SITE_METADATA.siteUrl}</link>
+    <description>${SITE_METADATA.description}</description>
+    <language>${SITE_METADATA.language}</language>
+    <lastBuildDate>${currentDate}</lastBuildDate>
+    <atom:link href="${SITE_METADATA.siteUrl}/back-feed.xml" rel="self" type="application/rss+xml" />
+${rssItems}
+  </channel>
+</rss>`
+
+  writeFileSync('./public/feed.xml', rssFeed)
+  console.log('📡 RSS feed generated successfully!')
+}
+
 export const Blog = defineDocumentType(() => ({
   name: 'Blog',
   filePathPattern: 'blog/**/*.mdx',
@@ -173,11 +215,14 @@ export default makeSource({
     ],
   },
   onSuccess: async (importData) => {
-    const { allBlogs, allAuthors } = await importData()
+    const { allDocuments } = await importData()
+    const allBlogs = allDocuments.filter((doc) => doc._raw.sourceFilePath.includes('blog/'))
+    const allAuthors = allDocuments.filter((doc) => doc._raw.sourceFilePath.includes('authors/'))
     console.log('📝 Import Blogs:', allBlogs?.length || 0)
     console.log('👤 Import Authors:', allAuthors?.length || 0)
     createTagCount(allBlogs)
     createSearchIndex(allBlogs)
+    createRssFeed(allBlogs)
     console.log('✨ Content source generated successfully!')
   },
 })
