@@ -5,7 +5,8 @@ tags: ['Kubernetes', 'Go', 'Operators', 'controller-runtime', 'CRD', 'DevOps']
 draft: false
 summary: 'Dive deep into creating a custom Kubernetes Operator from scratch. This comprehensive guide uses the Kube-Shift project to walk you through CRD management, advanced reconciliation loops, leader election, and robust testing strategies—everything you need for a production-ready build.'
 images: ['/static/images/blog/202507/Custom_Kubernetes_Operator/hero.webp']
-authors: ['mohit-nagaraj']
+authors:
+  - default
 ---
 
 Kubernetes has become the de-facto standard for container orchestration. As its adoption grows, so does the need for extending its capabilities to manage complex, stateful applications. This is where Kubernetes Operators come in. In this article, we'll explore how to build a custom Kubernetes Operator from scratch using Go and the `controller-runtime` library. We'll use [kube-shift](https://github.com/mohit-nagaraj/kube-shift), a custom operator for database schema migrations, as a real-world example to guide us through the process.
