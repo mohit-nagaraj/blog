@@ -48,6 +48,12 @@ const allBlogs = [
     date: '2025-07-14',
     draft: false,
   },
+  {
+    path: 'blog/202508/College_Life_And_Friends',
+    lastmod: '2025-08-03',
+    date: '2025-08-03',
+    draft: false,
+  },
 ]
 
 function generateSitemap() {
