@@ -1,0 +1,80 @@
+title: 'How To Recover Commits Even After Force Push'
+date: '2025-09-15'
+tags: ['Git', 'Amplify', 'GitHub', 'Builds', 'Version Control', 'Recovery']
+draft: false
+summary: 'A real world rescue story using Amplify builds, GitHub browse files, and git tools to bring work back even after a force push.'
+images: ['/static/images/blog/202509/How_To_Recover_Commits_Even_After_Force_Push/hero.webp']
+authors:
+  - default
+---
+
+It was Sep 15. I was deep in a new feature. I had Claude open helping with code and notes while I worked on branch a. Commits were green, builds were passing, and I sent the preview link to the team. All good.
+
+Then I switched to the next ticket. I made a fresh branch, pulled from remote, and started building. Two commits happened fast. The first was solid. The second broke stuff. I tried to go back to the good one. In a rush I pushed a revert to the wrong remote branch with force. The build went red. Files looked off. Three hours of work felt gone. Panic.
+
+On top of that a friend accidentally force pushed code from one PR into another PR. The second PR suddenly looked empty and its commits were no longer on that branch. That added to the confusion and stress.
+
+![Build that saved my day](/static/images/blog/202509/How_To_Recover_Commits_Even_After_Force_Push/hero3.webp)
+
+I pinged the team. I got a simple idea. We use Amplify for preview builds. Every build links to a commit. Even if a branch moves the build page still shows that commit id. I opened the last passing build, copied the commit id, and jumped to that commit on GitHub. There is a sweet browse files button. It shows the repo exactly at that commit as if you checked it out. If the branch moved GitHub even shows a banner that the commit does not belong to any branch which is fine because we only need the files at that point.
+
+From there I compared the files for my feature and copied the parts I needed back into the current branch. No drama. No scripts. Just careful copy paste and a fresh commit. The changes came back and the build turned green again. Relief.
+
+If you ever nuke your branch by mistake this flow can help:
+
+1. Open your CI for the last good run
+2. Copy the commit id from that build
+3. Open that commit on GitHub
+4. Use browse files to view the repo at that point
+5. Copy the needed changes back and commit
+
+## Practical recovery guide for a force push across PRs
+
+Here is what helped when code was force pushed from one PR into another and the second PR looked empty:
+
+1. Check local history with reflog
+
+```bash
+git reflog
+```
+
+Look for the commits from the original PR and note the commit ids.
+
+2. Recover a lost commit into a new branch
+
+```bash
+git checkout <commit-id>
+git checkout -b recovery-branch
+```
+
+3. See whether the original PR branch still references those commits
+
+```bash
+git log --oneline <original-pr-branch-name>
+```
+
+4. Use GitHub if you know the PR number
+
+Open the PR page. Even if it now looks empty the individual commits may still be visible. From each commit you can open browse files and copy what you need. You can also cherry pick specific commits:
+
+```bash
+git cherry-pick <commit-id>
+```
+
+5. Prevent repeats
+
+Use a safer push when you must rewrite history:
+
+```bash
+git push --force-with-lease
+```
+
+Add branch protection for important branches and avoid pushing from automated tools.
+
+A few takeaways from this mini chaos:
+
+I will avoid force pushing to any shared branch. I will keep work in a separate feature branch. CI is a time machine. When stuck I will ask for help fast. Also learn reflog for local rescue. I will not use Claude for commits or any push. All pushes are manual and reviewed.
+
+Big thanks to Naman for the idea and calm. That saved my work and my day.
+
+
