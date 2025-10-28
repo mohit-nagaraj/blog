@@ -1,5 +1,5 @@
 {
-  "ai": 2,
+  "ai": 3,
   "golang": 1,
   "llm": 2,
   "electron": 1,
@@ -46,5 +46,17 @@
   "github": 1,
   "builds": 1,
   "version-control": 1,
-  "recovery": 1
+  "recovery": 1,
+  "developer-life": 1,
+  "productivity": 1,
+  "setup": 1,
+  "mechanical-keyboards": 1,
+  "hardware": 1,
+  "work-setup": 1,
+  "hackathons": 1,
+  "development": 1,
+  "coding": 1,
+  "gpt": 1,
+  "claude": 1,
+  "gemini": 1
 }
