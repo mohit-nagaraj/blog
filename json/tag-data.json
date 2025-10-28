@@ -1,5 +1,5 @@
 {
-  "ai": 7,
+  "ai": 8,
   "golang": 1,
   "llm": 2,
   "electron": 1,
@@ -63,7 +63,7 @@
   "mental-health": 1,
   "career": 1,
   "learning": 1,
-  "future-of-dev": 2,
+  "future-of-dev": 3,
   "bootcamps": 1,
   "education": 1,
   "identity": 1,
