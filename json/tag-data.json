@@ -53,10 +53,14 @@
   "bootcamps": 1,
   "education": 1,
   "identity": 1,
-  "hackathons": 1,
-  "development": 1,
-  "coding": 1,
-  "gpt": 1,
-  "claude": 1,
-  "gemini": 1
+  "hackathons": 2,
+  "development": 3,
+  "coding": 2,
+  "gpt": 2,
+  "claude": 3,
+  "gemini": 2,
+  "productivity": 1,
+  "chatgpt": 1,
+  "github-copilot": 1,
+  "developer-life": 1
 }
